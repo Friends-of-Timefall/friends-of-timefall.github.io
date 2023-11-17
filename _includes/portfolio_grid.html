@@ -1,0 +1,25 @@
+<!-- members Grid Section -->
+<section id="members">
+  <div class="container members-flex-grid">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2>Members</h2>
+        <hr class="star-primary">
+      </div>
+    </div>
+    <div class="members-flex-row">
+      {% for post in site.posts %}
+      <div class="members-flex-item members-item">
+        <a href="#membersModal-{{ post.modal-id }}" class="members-link" data-toggle="modal">
+          <div class="caption">
+            <div class="caption-content">
+              <i class="fa fa-search-plus fa-3x"></i>
+            </div>
+          </div>
+          <img src="img/members/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
